@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <ListPreference
+        android:title="Speed"
+        android:key="speed"
+        android:summary="Please choose a speed."
+        android:entries="@array/speedList"
+        android:entryValues="@array/speedOption"/>
+    <CheckBoxPreference
+        android:title="Intro Music On/Off"
+        android:key="introMusic"
+        android:defaultValue="true"
+        android:summary="Toggles Intro Music On/Off"/>
+
+</PreferenceScreen>

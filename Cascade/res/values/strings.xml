@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Color Matching Game</string>
+    <string name="action_settings">Settings</string>
+    <string name="countdown">Time left 30s</string>
+    <string name="new_game">New Game</string>
+    <string name="main_menu_button">Main Menu</string>
+    <string name="exit">Exit</string>
+    <string name="start_game"> Start Game</string>
+    <string name="main_menu_text">This is the main menu activity.</string>
+    <string name="win">Congratulations! You WIN!!!</string>
+    <string name="lose">Sorry, you lost.</string>
+    <string name="preferences">Preferences</string>
+    <color name="black">#000000</color>
+    <drawable name="black">#000000</drawable>
+
+</resources>
