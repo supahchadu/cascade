@@ -8,7 +8,7 @@
     <string name="main_menu_button">Main Menu</string>
     <string name="exit">Exit</string>
     <string name="start_game"> Start Game</string>
-    <string name="main_menu_text">This is the main menu activity.</string>
+    <string name="main_menu_text">Welcome to the game!</string>
     <string name="win">Congratulations! You WIN!!!</string>
     <string name="lose">Sorry, you lost.</string>
     <string name="preferences">Preferences</string>

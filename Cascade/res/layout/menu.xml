@@ -8,25 +8,48 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/main_menu_text" />
-    
+        android:layout_gravity="center_horizontal"
+        android:padding="50sp"
+        android:text="@string/main_menu_text"
+        android:textSize="17sp" />
+
     <Button
         android:id="@+id/button1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="325dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/green_menu_button"
+        android:padding="10sp"
         android:text="@string/start_game" />
-    
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
+
     <Button
         android:id="@+id/preferences"
-        android:layout_width="fill_parent"
+         android:layout_width="325dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/blue_menu_button"
+        android:padding="10sp"
+        android:text="@string/preferences" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/preferences"/>
-    
-    <Button 
+        android:text="" />
+
+    <Button
         android:id="@+id/exit"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/exit"/>
-    
+         android:layout_width="325dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/red_menu_button"
+        android:padding="10sp"
+        android:text="@string/exit" />
 
 </LinearLayout>

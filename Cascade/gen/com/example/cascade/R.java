@@ -28,18 +28,22 @@ public final class R {
         public static final int activity_vertical_margin=0x7f070001;
     }
     public static final class drawable {
-        public static final int black=0x7f02000b;
+        public static final int black=0x7f02000f;
         public static final int blue_check=0x7f020000;
         public static final int blue_circle=0x7f020001;
         public static final int blue_circle_on=0x7f020002;
-        public static final int green_check=0x7f020003;
-        public static final int green_circle=0x7f020004;
-        public static final int green_circle_on=0x7f020005;
-        public static final int ic_launcher=0x7f020006;
-        public static final int red_check=0x7f020007;
-        public static final int red_circle=0x7f020008;
-        public static final int red_circle_on=0x7f020009;
-        public static final int splash_screen=0x7f02000a;
+        public static final int blue_menu_button=0x7f020003;
+        public static final int green_check=0x7f020004;
+        public static final int green_circle=0x7f020005;
+        public static final int green_circle_on=0x7f020006;
+        public static final int green_menu_button=0x7f020007;
+        public static final int ic_launcher=0x7f020008;
+        public static final int menu_screen=0x7f020009;
+        public static final int red_check=0x7f02000a;
+        public static final int red_circle=0x7f02000b;
+        public static final int red_circle_on=0x7f02000c;
+        public static final int red_menu_button=0x7f02000d;
+        public static final int splash_screen=0x7f02000e;
     }
     public static final class id {
         public static final int blue=0x7f0c0003;
@@ -47,19 +51,21 @@ public final class R {
         public static final int centerButton=0x7f0c0008;
         public static final int colorPath=0x7f0c0005;
         public static final int countdown=0x7f0c0004;
-        public static final int exit=0x7f0c000e;
+        public static final int exit=0x7f0c0010;
         public static final int finishLine=0x7f0c0006;
         public static final int green=0x7f0c0002;
         public static final int leftButton=0x7f0c0007;
         public static final int loseText=0x7f0c000a;
         public static final int main=0x7f0c0000;
-        public static final int main_menu=0x7f0c0011;
-        public static final int new_game=0x7f0c0010;
-        public static final int preferences=0x7f0c000d;
+        public static final int main_menu=0x7f0c0013;
+        public static final int new_game=0x7f0c0012;
+        public static final int preferences=0x7f0c000e;
         public static final int red=0x7f0c0001;
         public static final int rightButton=0x7f0c0009;
         public static final int textView1=0x7f0c000b;
-        public static final int winText=0x7f0c000f;
+        public static final int textView2=0x7f0c000d;
+        public static final int textView3=0x7f0c000f;
+        public static final int winText=0x7f0c0011;
     }
     public static final class layout {
         public static final int game=0x7f030000;
