@@ -28,7 +28,6 @@ public class Game extends Activity {
 		setContentView(R.layout.game);
 
 		initialize();
-
 		// Randomizes the winning set at the bottom
 		Randomizer winningSet = new Randomizer();
 		winningSet.random(leftButton, centerButton, rightButton);
