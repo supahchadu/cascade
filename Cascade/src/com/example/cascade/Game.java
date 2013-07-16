@@ -16,7 +16,7 @@ import android.widget.ToggleButton;
 
 public class Game extends Activity {
  
-	CountDownTimer  timer;
+	CountDownTimer   timer;
 	int seconds = 30;
 	double speedFactor = .48;
 	TextView counter;
