@@ -61,7 +61,9 @@
 	    android:background="@android:color/transparent"
 	    android:button="@drawable/green_check"
 	    android:focusable="false"
-	    android:focusableInTouchMode="false" />
+	    android:focusableInTouchMode="false" 
+	    android:textOff=""
+        android:textOn="" />
 
 	<ToggleButton
 	    android:id="@+id/leftButton"
@@ -87,7 +89,9 @@
 	    android:background="@android:color/transparent"
 	    android:button="@drawable/blue_check"
 	    android:focusable="false"
-	    android:focusableInTouchMode="false" />
+	    android:focusableInTouchMode="false" 
+	    android:textOff=""
+        android:textOn="" />
 
 	<ToggleButton
 	    android:id="@+id/rightButton"
