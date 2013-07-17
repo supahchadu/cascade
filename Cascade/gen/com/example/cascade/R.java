@@ -9,6 +9,10 @@ package com.example.cascade;
 
 public final class R {
     public static final class array {
+        public static final int gameOptions=0x7f060002;
+        public static final int gameOptionsValues=0x7f060003;
+        public static final int reset=0x7f060004;
+        public static final int resetValues=0x7f060005;
         public static final int speedList=0x7f060000;
         public static final int speedOption=0x7f060001;
     }
@@ -16,6 +20,7 @@ public final class R {
     }
     public static final class color {
         public static final int black=0x7f090000;
+        public static final int white=0x7f090001;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -48,33 +53,42 @@ public final class R {
         public static final int splash_screen=0x7f020010;
     }
     public static final class id {
-        public static final int blue=0x7f0c0003;
-        public static final int button1=0x7f0c000c;
-        public static final int centerButton=0x7f0c0008;
-        public static final int colorPath=0x7f0c0005;
-        public static final int countdown=0x7f0c0004;
-        public static final int exit=0x7f0c0010;
-        public static final int finishLine=0x7f0c0006;
-        public static final int green=0x7f0c0002;
-        public static final int leftButton=0x7f0c0007;
-        public static final int loseText=0x7f0c000a;
-        public static final int main=0x7f0c0000;
-        public static final int main_menu=0x7f0c0013;
-        public static final int new_game=0x7f0c0012;
-        public static final int preferences=0x7f0c000e;
-        public static final int red=0x7f0c0001;
-        public static final int rightButton=0x7f0c0009;
-        public static final int textView1=0x7f0c000b;
-        public static final int textView2=0x7f0c000d;
-        public static final int textView3=0x7f0c000f;
-        public static final int winText=0x7f0c0011;
+        public static final int BTCGame=0x7f0c0002;
+        public static final int blue=0x7f0c0007;
+        public static final int btcend=0x7f0c0000;
+        public static final int button1=0x7f0c0012;
+        public static final int centerButton=0x7f0c000c;
+        public static final int colorPath=0x7f0c0009;
+        public static final int countdown=0x7f0c0008;
+        public static final int directions=0x7f0c0004;
+        public static final int exit=0x7f0c0016;
+        public static final int finishLine=0x7f0c000a;
+        public static final int green=0x7f0c0006;
+        public static final int high_score=0x7f0c0001;
+        public static final int leftButton=0x7f0c000b;
+        public static final int leveltwo=0x7f0c000f;
+        public static final int loseText=0x7f0c0010;
+        public static final int main=0x7f0c000e;
+        public static final int main_menu=0x7f0c0019;
+        public static final int new_game=0x7f0c0018;
+        public static final int preferences=0x7f0c0014;
+        public static final int red=0x7f0c0005;
+        public static final int rightButton=0x7f0c000d;
+        public static final int score=0x7f0c0003;
+        public static final int textView1=0x7f0c0011;
+        public static final int textView2=0x7f0c0013;
+        public static final int textView3=0x7f0c0015;
+        public static final int winText=0x7f0c0017;
     }
     public static final class layout {
-        public static final int game=0x7f030000;
-        public static final int lose=0x7f030001;
-        public static final int menu=0x7f030002;
-        public static final int splash=0x7f030003;
-        public static final int win=0x7f030004;
+        public static final int btcend=0x7f030000;
+        public static final int btcgame=0x7f030001;
+        public static final int game=0x7f030002;
+        public static final int leveltwo=0x7f030003;
+        public static final int lose=0x7f030004;
+        public static final int menu=0x7f030005;
+        public static final int splash=0x7f030006;
+        public static final int win=0x7f030007;
     }
     public static final class menu {
         public static final int in_game_menu=0x7f0b0000;
@@ -85,13 +99,18 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f080001;
         public static final int app_name=0x7f080000;
+        public static final int btc_end=0x7f08000e;
         public static final int countdown=0x7f080002;
+        public static final int directions=0x7f08000d;
         public static final int exit=0x7f080005;
+        public static final int highscore=0x7f08000f;
         public static final int lose=0x7f080009;
         public static final int main_menu_button=0x7f080004;
         public static final int main_menu_text=0x7f080007;
         public static final int new_game=0x7f080003;
         public static final int preferences=0x7f08000a;
+        public static final int score=0x7f08000b;
+        public static final int scorebtn=0x7f08000c;
         public static final int start_game=0x7f080006;
         public static final int win=0x7f080008;
     }

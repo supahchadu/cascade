@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+  	<ListPreference
+  	    android:title="Game Option"
+  	    android:key="gameOption"
+  	    android:summary="What type of game would you like to play?"
+  	    android:entries="@array/gameOptions"
+  	    android:entryValues="@array/gameOptionsValues"/>
     <ListPreference
         android:title="Speed"
         android:key="speed"
@@ -11,5 +17,11 @@
         android:key="introMusic"
         android:defaultValue="true"
         android:summary="Toggles Intro Music On/Off"/>
+	<ListPreference
+	    android:title="Reset High Score"
+	    android:key="reset"
+	    android:entries="@array/reset"
+	    android:entryValues="@array/resetValues"
+	    android:summary="Do you want to reset the High Score?"/>
 
 </PreferenceScreen>

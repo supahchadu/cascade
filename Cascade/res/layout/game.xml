@@ -64,7 +64,8 @@
           android:layout_centerHorizontal="true"
           android:gravity="right"
           android:text="@string/countdown"
-          android:textSize="20sp" />
+          android:textSize="20sp"
+          android:textColor="@color/white" />
       
       <TextView
           android:id="@+id/colorPath"

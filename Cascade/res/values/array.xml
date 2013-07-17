@@ -13,5 +13,27 @@
         <item>3</item>
         <item>4</item>
     </string-array>
+    
+    <string-array name="gameOptions">
+        <item>Standard</item>
+        <item>Beat the Clock</item>
+        <item>Side Scroll</item>
+    </string-array>
+    
+    <string-array name="gameOptionsValues">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    
+    <string-array name="reset">
+        <item>No</item>
+        <item>Yes</item>
+    </string-array>
+    
+    <string-array name="resetValues">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
    
 </resources>

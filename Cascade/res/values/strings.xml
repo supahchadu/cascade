@@ -12,7 +12,13 @@
     <string name="win">Congratulations! You WIN!!!</string>
     <string name="lose">Sorry, you lost.</string>
     <string name="preferences">Preferences</string>
+    <string name="score">Score: 0</string>
+    <string name="scorebtn">Press Here!</string>
+    <string name="directions">Press balls at bottom to score.</string>
+    <string name="btc_end">Your Score: 0</string>
+    <string name="highscore">High Score: 0</string>
     <color name="black">#000000</color>
     <drawable name="black">#000000</drawable>
+    <color name="white">#FFFFFF</color>
 
 </resources>
