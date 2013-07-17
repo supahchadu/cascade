@@ -3,7 +3,6 @@ package com.example.cascade;
 import android.widget.ToggleButton;
 import java.util.Random;
 
-
 public class Randomizer{
 
 	int colorArray[] = {R.drawable.red_circle, R.drawable.green_circle, R.drawable.blue_circle};
