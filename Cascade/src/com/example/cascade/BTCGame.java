@@ -40,16 +40,16 @@ public class BTCGame extends Activity {
 		
 		if(secValues.contentEquals("1")){
 			seconds = 30;
-			speedFactor = .48;
+			speedFactor = .56 ;
 		}else if (secValues.contentEquals("2")){
 			seconds = 20;
-			speedFactor = .70;
+			speedFactor = .85;
 		}else if (secValues.contentEquals("3")){
 			seconds = 10;
-			speedFactor = 1.5;	
+			speedFactor = 1.8;	
 		}else if (secValues.contentEquals("4")){
 			seconds = 5;
-			speedFactor = 3.2;	
+			speedFactor = 3.4;	
 		}
 
 		//High Score Handler

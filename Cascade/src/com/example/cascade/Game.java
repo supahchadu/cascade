@@ -41,7 +41,7 @@ public class Game extends Activity {
 			speedFactor = .56 ;
 		}else if (secValues.contentEquals("2")){
 			seconds = 20;
-			speedFactor = .83;
+			speedFactor = .85;
 		}else if (secValues.contentEquals("3")){
 			seconds = 10;
 			speedFactor = 1.8;	
