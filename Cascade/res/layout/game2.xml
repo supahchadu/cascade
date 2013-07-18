@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<RelativeLayout tools:context=".Game"
+	 android:paddingTop="@dimen/activity_vertical_margin" 
+	 android:paddingRight="@dimen/activity_horizontal_margin" 
+	 android:paddingLeft="@dimen/activity_horizontal_margin"
+	 android:paddingBottom="@dimen/activity_vertical_margin"
+	 android:background="@drawable/background_bokeh" 
+	 android:layout_height="match_parent" 
+	 android:layout_width="match_parent" 
+	 android:id="@+id/main" 
+	 xmlns:tools="http://schemas.android.com/tools" 
+	 xmlns:android="http://schemas.android.com/apk/res/android">
+	 
+	 <ToggleButton 
+	  android:background="@android:color/transparent" 
+	  android:layout_height="wrap_content" 
+	  android:layout_width="wrap_content" 
+	  android:id="@+id/red" 
+	  android:textOn="" 
+	  android:textOff="" 
+	  android:focusableInTouchMode="false" 
+	  android:focusable="false" 
+	  android:alpha="101" 
+	  android:button="@drawable/red_check" 
+	  android:layout_marginTop="30dp"
+	  android:layout_alignParentLeft="true" 
+	  android:layout_alignParentTop="true"/>
+	 
+	 <ToggleButton 
+	  android:background="@android:color/transparent"
+	  android:layout_height="wrap_content"
+	  android:layout_width="wrap_content"
+	  android:id="@+id/blue" 
+	  android:textOn="" 
+	  android:textOff="" 
+	  android:focusableInTouchMode="false" 
+	  android:focusable="false"
+	  android:alpha="98" 
+	  android:button="@drawable/blue_check" 
+	  android:layout_marginTop="30dp"
+	  android:layout_alignParentTop="true"
+	  android:layout_alignParentRight="true"/>
+	 
+	 <TextView
+	     android:id="@+id/countdown"
+	     android:layout_width="wrap_content"
+	     android:layout_height="wrap_content"
+	     android:layout_alignParentTop="true"
+	     android:layout_centerHorizontal="true"
+	     android:gravity="right"
+	     android:text="@string/countdown"
+	     android:textColor="@color/white"
+	     android:textSize="20sp" />
+	 
+	 <TextView 
+	  android:layout_height="match_parent" 
+	  android:layout_width="10pt" 
+	  android:id="@+id/colorPath" 
+	  android:layout_alignParentTop="true" 
+	  android:layout_centerHorizontal="true"
+	  android:layout_marginBottom="50dp" 
+	  android:layout_below="@string/countdown"/>
+	 
+	 <TextView 
+	  android:background="@color/black" 
+	  android:layout_height="3dp" 
+	  android:layout_width="match_parent" 
+	  android:id="@+id/finishLine"
+	  android:layout_marginBottom="50dp"
+	  android:layout_alignParentBottom="true"/>
+	 
+	 <ToggleButton
+	  android:background="@android:color/transparent" 
+	  android:layout_height="wrap_content" 
+	  android:layout_width="wrap_content" 
+	  android:id="@+id/leftButton"
+	  android:textOn="" 
+	  android:textOff="" 
+	  android:focusableInTouchMode="false" 
+	  android:focusable="false" 
+	  android:button="@drawable/red_circle" 
+	  android:layout_alignParentLeft="true" 
+	  android:layout_alignParentBottom="true"/>
+	 
+	 <ToggleButton
+	  android:background="@android:color/transparent"
+      android:layout_height="wrap_content" 
+      android:layout_width="wrap_content" 
+      android:id="@+id/rightButton" 
+      android:textOn="" 
+      android:textOff="" 
+      android:focusableInTouchMode="false" 
+      android:focusable="false" 
+      android:button="@drawable/red_circle" 
+      android:layout_alignParentRight="true"
+      android:layout_alignParentBottom="true"/>
+	 
+	 <ToggleButton 
+	  android:background="@android:color/transparent"
+	  android:layout_height="wrap_content"
+      android:layout_width="wrap_content"
+      android:id="@+id/purple"
+      android:textOn=""
+      android:textOff=""
+      android:focusableInTouchMode="false" 
+      android:focusable="false" 
+      android:alpha="100" 
+      android:button="@drawable/purple_check" 
+      android:layout_marginLeft="10dp" 
+      android:layout_toRightOf="@+id/red" 
+      android:layout_alignBottom="@+id/red" 
+      android:layout_alignBaseline="@+id/red"/>
+	 
+	 <ToggleButton 
+	  android:background="@android:color/transparent" 
+	  android:layout_height="wrap_content" 
+	  android:layout_width="wrap_content" 
+	  android:id="@+id/green" 
+	  android:textOn="" 
+	  android:textOff="" 
+	  android:focusableInTouchMode="false" 
+	  android:focusable="false" 
+	  android:alpha="99" 
+	  android:button="@drawable/green_check" 
+	  android:layout_alignBottom="@+id/blue" 
+	  android:layout_alignBaseline="@+id/blue" 
+	  android:layout_marginRight="10dp" 
+	  android:layout_toLeftOf="@+id/blue"/>
+	 
+	 <ToggleButton 
+	  android:background="@android:color/transparent" 
+	  android:layout_height="wrap_content" 
+	  android:layout_width="wrap_content" 
+	  android:id="@+id/centerRightButton" 
+	  android:textOn="" 
+	  android:textOff="" 
+	  android:focusableInTouchMode="false" 
+	  android:focusable="false" 
+	  android:button="@drawable/red_circle" 
+	  android:layout_alignBottom="@+id/rightButton" 
+	  android:layout_alignBaseline="@+id/rightButton" 
+	  android:layout_alignLeft="@+id/green"
+	  android:layout_marginRight="10dp"/>
+	 
+	 <ToggleButton 
+	  android:id="@+id/centerLeftButton"
+	  android:background="@android:color/transparent"
+      android:layout_height="wrap_content" 
+      android:layout_width="wrap_content" 
+      android:textOn="" 
+      android:textOff="" 
+      android:focusableInTouchMode="false" 
+      android:focusable="false" 
+      android:button="@drawable/red_circle" 
+      android:layout_marginLeft="10dp" 
+      android:layout_alignBottom="@+id/leftButton" 
+      android:layout_alignBaseline="@+id/leftButton" 
+      android:layout_toLeftOf="@+id/colorPath"/>
+
+</RelativeLayout>
+
+	  
+
+
+
+

@@ -24,6 +24,7 @@ public class Continuous extends Activity {
 	ToggleButton redButton, greenButton, blueButton, leftButton, centerButton, rightButton;
 	Chronometer clock;
 	long time = 0;
+	int score = 0;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -57,9 +58,10 @@ public class Continuous extends Activity {
 		
 		//Controls the count down timer from 30 seconds and displays 
 		//in 1 second intervals
-		timer = new CountDownTimer((seconds*1000), 1) {
-		    @Override
-			public void onTick(long millisUntilFinished) {
+		
+			timer = new CountDownTimer((seconds*1000), 1) {
+				@Override
+				public void onTick(long millisUntilFinished) {
 		         
 		         //each millisecond it ticks the circle drops by 1/speedFactor 
 		         //of the height of the path
@@ -76,10 +78,10 @@ public class Continuous extends Activity {
 		         swap.swapButton(redButton, blueButton);
 		         swap.swapButton(greenButton, blueButton);
 		                 
-		    }
-		    
-			@Override
-			public void onFinish() {
+				}
+				
+				@Override
+				public void onFinish() {
 				
 				WinTest winner = new WinTest();
 				
@@ -102,15 +104,11 @@ public class Continuous extends Activity {
 				   winner.test(centerButton, greenButton) &&
 				   winner.test(rightButton, redButton)){
 				   
-					Intent win = new Intent("com.example.cascade.WIN");
-					startActivity(win);					
-					
-				}else{
-					
-					Intent lose = new Intent("com.example.cascade.LOSE");
-					startActivity(lose);}
-		    }
-		}.start();
+					score++;
+					redButton.setY(0);
+timer.start();}
+				}
+			}.start();;
 	}
 	
 	public void initialize(){
