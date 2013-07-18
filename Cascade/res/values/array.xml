@@ -19,6 +19,9 @@
         <item>Beat the Clock</item>
         <item>Side Scroll</item>
         <item>Continuous Play</item>
+        <item>God Mode</item>
+        <item>Peekaboo</item>
+        <item>Think Fast</item>
     </string-array>
     
     <string-array name="gameOptionsValues">
@@ -26,6 +29,9 @@
         <item>2</item>
         <item>3</item>
         <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
     </string-array>
     
     <string-array name="reset">
