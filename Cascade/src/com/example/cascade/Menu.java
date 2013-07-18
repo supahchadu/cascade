@@ -41,6 +41,8 @@ public class Menu extends Activity implements View.OnClickListener{
 			gOption = "BTCGAME";
 		}else if (gameOption.contentEquals("3")){
 			gOption = "LEVELTWO";
+		}else if (gameOption.contentEquals("4")){
+			gOption = "CONTINUOUS";
 		}
 		
 		switch(v.getId()){
