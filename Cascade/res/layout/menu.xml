@@ -11,17 +11,16 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:padding="50sp"
-        android:text="@string/main_menu_text"
-        android:textSize="17sp" 
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+
     <Button
         android:id="@+id/button1"
         android:layout_width="325dp"
         android:layout_height="100dp"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/green_menu_button"
-        android:padding="10sp"
-        android:text="@string/start_game" />
+        android:padding="10sp" />
 
     <TextView
         android:id="@+id/textView2"
@@ -31,12 +30,11 @@
 
     <Button
         android:id="@+id/preferences"
-         android:layout_width="325dp"
+        android:layout_width="325dp"
         android:layout_height="100dp"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/blue_menu_button"
-        android:padding="10sp"
-        android:text="@string/preferences" />
+        android:padding="10sp" />
 
     <TextView
         android:id="@+id/textView3"
@@ -46,11 +44,10 @@
 
     <Button
         android:id="@+id/exit"
-         android:layout_width="325dp"
+        android:layout_width="325dp"
         android:layout_height="100dp"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/red_menu_button"
-        android:padding="10sp"
-        android:text="@string/exit" />
+        android:padding="10sp" />
 
 </LinearLayout>
