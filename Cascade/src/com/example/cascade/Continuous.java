@@ -20,11 +20,12 @@ public class Continuous extends Activity {
 	CountDownTimer timer;
 	int seconds = 30;
 	double speedFactor = .48;
-	TextView counter;
+	TextView scoreboard,disp;
 	ToggleButton redButton, greenButton, blueButton, leftButton, centerButton, rightButton;
 	Chronometer clock;
 	long time = 0;
-	int score = 0;
+	int score = 0;	
+	Randomizer winningSet = new Randomizer();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -35,25 +36,23 @@ public class Continuous extends Activity {
 		startClock();
 		
 		//Randomizes the winning set at the bottom 
-		Randomizer winningSet = new Randomizer();
 		winningSet.random(leftButton, centerButton, rightButton);
-		
 		
 		SharedPreferences getData = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
 		String secValues = getData.getString("speed", "1");
 		
 		if(secValues.contentEquals("1")){
 			seconds = 30;
-			speedFactor = .56 ;
+			speedFactor = .50 ;
 		}else if (secValues.contentEquals("2")){
 			seconds = 20;
-			speedFactor = .85;
+			speedFactor = .75;
 		}else if (secValues.contentEquals("3")){
 			seconds = 10;
-			speedFactor = 1.8;	
+			speedFactor = 1.5;	
 		}else if (secValues.contentEquals("4")){
 			seconds = 5;
-			speedFactor = 3.4;	
+			speedFactor = 3.0;	
 		}
 		
 		//Controls the count down timer from 30 seconds and displays 
@@ -105,15 +104,28 @@ public class Continuous extends Activity {
 				   winner.test(rightButton, redButton)){
 				   
 					score++;
-					redButton.setY(0);
-timer.start();}
+					scoreboard.setText("Score: " + score);
+					redButton.setY(80);
+					greenButton.setY(80);
+					blueButton.setY(80);
+					winningSet.random(leftButton, centerButton, rightButton);
+					timer.start();}
+					
+				else{
+					redButton.setY(80);
+					greenButton.setY(80);
+					blueButton.setY(80);
+					winningSet.random(leftButton, centerButton, rightButton);
+					timer.start();
+				}
 				}
 			}.start();;
 	}
 	
 	public void initialize(){
 		clock = (Chronometer) findViewById(R.id.clock);
-		counter = (TextView) findViewById (R.id.countdown);
+		scoreboard = (TextView) findViewById (R.id.cont_scoreboard);
+		disp = (TextView) findViewById (R.id.displayssss);
 		redButton = (ToggleButton) findViewById (R.id.red);
 		greenButton = (ToggleButton) findViewById (R.id.green);
 		blueButton = (ToggleButton) findViewById (R.id.blue);
@@ -134,6 +146,8 @@ timer.start();}
 		Point size = new Point();
 		display.getSize(size);
 		int height = size.y;
+		
+		disp.setText(""+height);
 		
 		final TextView path = (TextView) findViewById (R.id.colorPath);	  
 		path.setY(height);

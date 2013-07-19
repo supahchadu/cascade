@@ -40,7 +40,7 @@ public class BTCGame extends Activity {
 		
 		if(secValues.contentEquals("1")){
 			seconds = 30;
-			speedFactor = .56 ;
+			speedFactor = .56;
 		}else if (secValues.contentEquals("2")){
 			seconds = 20;
 			speedFactor = .85;

@@ -44,16 +44,16 @@ public class ThinkFastGame extends Activity {
 		
 		if(secValues.contentEquals("1")){
 			seconds = 30;
-			speedFactor = .56 ;
+			speedFactor = .55;
 		}else if (secValues.contentEquals("2")){
 			seconds = 20;
 			speedFactor = .85;
 		}else if (secValues.contentEquals("3")){
 			seconds = 10;
-			speedFactor = 1.8;	
+			speedFactor = 1.7;	
 		}else if (secValues.contentEquals("4")){
 			seconds = 5;
-			speedFactor = 3.4;	
+			speedFactor = 4.5;	
 		}
 		
 		//Controls the count down timer from 30 seconds and displays 
