@@ -2,7 +2,6 @@ package com.example.cascade;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.os.SystemClock;
 import android.preference.PreferenceManager;
 import android.app.Activity;
 import android.content.Intent;
@@ -11,7 +10,6 @@ import android.graphics.Point;
 import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Chronometer;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
@@ -20,12 +18,8 @@ public class Continuous extends Activity {
 	CountDownTimer timer;
 	int seconds = 30;
 	double speedFactor = .48;
-	TextView scoreboard,disp;
+	TextView counter;
 	ToggleButton redButton, greenButton, blueButton, leftButton, centerButton, rightButton;
-	Chronometer clock;
-	long time = 0;
-	int score = 0;	
-	Randomizer winningSet = new Randomizer();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -33,34 +27,35 @@ public class Continuous extends Activity {
 		setContentView(R.layout.continuous);
 		
 		initialize();
-		startClock();
 		
 		//Randomizes the winning set at the bottom 
+		Randomizer winningSet = new Randomizer();
 		winningSet.random(leftButton, centerButton, rightButton);
+		
 		
 		SharedPreferences getData = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
 		String secValues = getData.getString("speed", "1");
 		
 		if(secValues.contentEquals("1")){
 			seconds = 30;
-			speedFactor = .50 ;
+			speedFactor = .56;
 		}else if (secValues.contentEquals("2")){
 			seconds = 20;
-			speedFactor = .75;
+			speedFactor = .85;
 		}else if (secValues.contentEquals("3")){
 			seconds = 10;
-			speedFactor = 1.5;	
+			speedFactor = 1.8;	
 		}else if (secValues.contentEquals("4")){
 			seconds = 5;
-			speedFactor = 3.0;	
+			speedFactor = 3.4;	
 		}
 		
 		//Controls the count down timer from 30 seconds and displays 
 		//in 1 second intervals
-		
-			timer = new CountDownTimer((seconds*1000), 1) {
-				@Override
-				public void onTick(long millisUntilFinished) {
+		timer = new CountDownTimer((seconds*1000), 1) {
+		    @Override
+			public void onTick(long millisUntilFinished) {
+		         counter.setText("Time left " + millisUntilFinished / 1000);
 		         
 		         //each millisecond it ticks the circle drops by 1/speedFactor 
 		         //of the height of the path
@@ -77,10 +72,10 @@ public class Continuous extends Activity {
 		         swap.swapButton(redButton, blueButton);
 		         swap.swapButton(greenButton, blueButton);
 		                 
-				}
-				
-				@Override
-				public void onFinish() {
+		    }
+		    
+			@Override
+			public void onFinish() {
 				
 				WinTest winner = new WinTest();
 				
@@ -103,40 +98,28 @@ public class Continuous extends Activity {
 				   winner.test(centerButton, greenButton) &&
 				   winner.test(rightButton, redButton)){
 				   
-					score++;
-					scoreboard.setText("Score: " + score);
-					redButton.setY(80);
-					greenButton.setY(80);
-					blueButton.setY(80);
-					winningSet.random(leftButton, centerButton, rightButton);
-					timer.start();}
+					Intent win = new Intent("com.example.cascade.WIN");
+					startActivity(win);					
 					
-				else{
-					redButton.setY(80);
-					greenButton.setY(80);
-					blueButton.setY(80);
-					winningSet.random(leftButton, centerButton, rightButton);
-					timer.start();
-				}
-				}
-			}.start();;
+				}else{
+					
+					Intent lose = new Intent("com.example.cascade.LOSE");
+					startActivity(lose);}
+					
+				  				   
+		    counter.setText("done!");
+		    }
+		}.start();
 	}
 	
 	public void initialize(){
-		clock = (Chronometer) findViewById(R.id.clock);
-		scoreboard = (TextView) findViewById (R.id.cont_scoreboard);
-		disp = (TextView) findViewById (R.id.displayssss);
+		counter = (TextView) findViewById (R.id.countdown);
 		redButton = (ToggleButton) findViewById (R.id.red);
 		greenButton = (ToggleButton) findViewById (R.id.green);
 		blueButton = (ToggleButton) findViewById (R.id.blue);
 		leftButton = (ToggleButton) findViewById (R.id.leftButton);
 		centerButton = (ToggleButton) findViewById (R.id.centerButton);
 		rightButton = (ToggleButton) findViewById (R.id.rightButton);
-	}
-	
-	public void startClock(){
-		clock.setBase(SystemClock.elapsedRealtime()+time);
-		clock.start();
 	}
 	
 	//method that moves the circle down the path
@@ -146,8 +129,6 @@ public class Continuous extends Activity {
 		Point size = new Point();
 		display.getSize(size);
 		int height = size.y;
-		
-		disp.setText(""+height);
 		
 		final TextView path = (TextView) findViewById (R.id.colorPath);	  
 		path.setY(height);
