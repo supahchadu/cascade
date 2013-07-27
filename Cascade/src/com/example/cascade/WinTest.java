@@ -14,4 +14,16 @@ public class WinTest extends Activity{
 			return false;
 		}
 	}
+	public boolean sideScrollTest (ToggleButton position, ToggleButton color){
+
+		if (position.getAlpha() == color.getAlpha() && 
+				(position.getY() == color.getY())) {
+				return true;
+			}
+		else{
+			return false;
+		}
+	}
+
+	
 }

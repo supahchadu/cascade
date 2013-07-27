@@ -71,15 +71,23 @@ public class LevelTwo extends Activity {
 				moveButtonsLevel_Two(greenButton);
 				moveButtonsLevel_Two(blueButton);
 
-				Swap swap = new Swap();
-
+				//Swap swap = new Swap();
+				
+				swapButton(greenButton, redButton);
+				swapButton(blueButton, redButton);
+				swapButton(redButton, greenButton);
+				swapButton(blueButton, greenButton);
+				swapButton(redButton, blueButton);
+				swapButton(greenButton, blueButton);
+				
+/*
 				swap.swapButton(greenButton, redButton);
 				swap.swapButton(blueButton, redButton);
 				swap.swapButton(redButton, greenButton);
 				swap.swapButton(blueButton, greenButton);
 				swap.swapButton(redButton, blueButton);
 				swap.swapButton(greenButton, blueButton);
-
+*/
 			}
 
 			@Override
@@ -87,25 +95,26 @@ public class LevelTwo extends Activity {
 
 				WinTest winner = new WinTest();
 
-				if (winner.test(leftButton, redButton)
-						&& winner.test(centerButton, blueButton)
-						&& winner.test(rightButton, greenButton)
+				
+				if (winner.sideScrollTest(leftButton, redButton)
+						&& winner.sideScrollTest(centerButton, blueButton)
+						&& winner.sideScrollTest(rightButton, greenButton)
 						
-						|| winner.test(leftButton, redButton)
-						&& winner.test(centerButton, greenButton)
-						&& winner.test(rightButton, blueButton)
-						|| winner.test(leftButton, greenButton)
-						&& winner.test(centerButton, redButton)
-						&& winner.test(rightButton, blueButton)
-						|| winner.test(leftButton, greenButton)
-						&& winner.test(centerButton, blueButton)
-						&& winner.test(rightButton, redButton)
-						|| winner.test(leftButton, blueButton)
-						&& winner.test(centerButton, redButton)
-						&& winner.test(rightButton, greenButton)
-						|| winner.test(leftButton, blueButton)
-						&& winner.test(centerButton, greenButton)
-						&& winner.test(rightButton, redButton)) {
+						|| winner.sideScrollTest(leftButton, redButton)
+						&& winner.sideScrollTest(centerButton, greenButton)
+						&& winner.sideScrollTest(rightButton, blueButton)
+						|| winner.sideScrollTest(leftButton, greenButton)
+						&& winner.sideScrollTest(centerButton, redButton)
+						&& winner.sideScrollTest(rightButton, blueButton)
+						|| winner.sideScrollTest(leftButton, greenButton)
+						&& winner.sideScrollTest(centerButton, blueButton)
+						&& winner.sideScrollTest(rightButton, redButton)
+						|| winner.sideScrollTest(leftButton, blueButton)
+						&& winner.sideScrollTest(centerButton, redButton)
+						&& winner.sideScrollTest(rightButton, greenButton)
+						|| winner.sideScrollTest(leftButton, blueButton)
+						&& winner.sideScrollTest(centerButton, greenButton)
+						&& winner.sideScrollTest(rightButton, redButton)) {
 					
 					
 
@@ -142,24 +151,7 @@ public class LevelTwo extends Activity {
 	}
 	
 
-	// method that moves the circle down the path
-	//For Level 1
-	/*
-	public void moveButtons(ToggleButton color) {
 
-		Display display = getWindowManager().getDefaultDisplay();
-		Point size = new Point();
-		display.getSize(size);
-		int height = size.y;
-
-		final TextView path = (TextView) findViewById(R.id.colorPath);
-		path.setY(height);
-
-		if (color.getY() < path.getBottom()) {
-			color.setY((float) (color.getY() + speedFactor));
-		}
-	}
-	*/
 	public void moveButtonsLevel_Two(ToggleButton color){
 		
 		
@@ -219,4 +211,23 @@ public class LevelTwo extends Activity {
 		timer.cancel();
 		finish();
 	}
+	
+	public void swapButton(final ToggleButton origin,final ToggleButton colorDestination){
+		
+		if (origin.isChecked() && colorDestination.isChecked()){
+			float temp = colorDestination.getX();
+			float tempY = colorDestination.getY();
+			colorDestination.setY(origin.getY());
+			
+			
+			colorDestination.setX(origin.getX());
+			origin.setX(temp);
+			origin.setY(tempY);
+			
+			origin.setChecked(false);
+			colorDestination.setChecked(false);}		
+}
+	
+
+
 }

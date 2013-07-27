@@ -1,4 +1,5 @@
 
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/leveltwo"
@@ -11,21 +12,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".LevelTwo" >
 
-      <ToggleButton
-          android:id="@+id/red"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_alignParentTop="true"
-          android:layout_alignParentLeft="true"
-          android:layout_marginTop="30dp"
-          android:background="@android:color/transparent"
-          android:button="@drawable/red_check"
-          android:alpha="100"
-          android:focusable="false"
-          android:focusableInTouchMode="false"
-          android:textOff=""
-          android:textOn="" />
-      
+     
       <TextView
           android:id="@+id/countdown"
           android:layout_width="wrap_content"
@@ -34,64 +21,42 @@
           android:layout_centerHorizontal="true"
           android:gravity="right"
           android:text="@string/countdown"
-          android:textSize="20sp" />
+          android:textSize="20sp" 
+          />
+
+	<TextView
+	    android:id="@+id/colorPath"
+	    android:layout_width="10pt"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBaseline="@+id/green"
+	    android:layout_alignBottom="@+id/green"
+	    android:layout_alignLeft="@+id/green"
+	    android:layout_toLeftOf="@+id/centerButton" />
 
 	<ToggleButton
 	    android:id="@+id/centerButton"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
+	    android:layout_alignLeft="@+id/rightButton"
 	    android:layout_centerVertical="true"
-	    android:layout_toRightOf="@+id/countdown"
 	    android:background="@android:color/transparent"
-	    android:button="@drawable/red_circle"
-	    android:focusable="false"
-	    android:focusableInTouchMode="false"
-	    android:textOff=""
-        android:textOn="" />
+	    android:button="@drawable/green_circle"
+	    />
 
 	<ToggleButton
 	    android:id="@+id/green"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
-	    android:layout_alignBaseline="@+id/centerButton"
-	    android:layout_alignBottom="@+id/centerButton"
-	    android:layout_alignLeft="@+id/blue"
-	    android:layout_alignRight="@+id/red"
+	    android:layout_alignLeft="@+id/red"
+	    android:layout_centerVertical="true"
 	    android:alpha="99"
 	    android:background="@android:color/transparent"
 	    android:button="@drawable/green_check"
 	    android:focusable="false"
-	    android:focusableInTouchMode="false" 
+	    android:focusableInTouchMode="false"
+	    android:textOn=""
 	    android:textOff=""
-        android:textOn="" />
-
-	<ToggleButton
-	    android:id="@+id/leftButton"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:layout_alignLeft="@+id/centerButton"
-	    android:layout_below="@+id/countdown"
-	    android:background="@android:color/transparent"
-	    android:button="@drawable/red_circle"
-	    android:focusable="false"
-	    android:focusableInTouchMode="false" 
-	    android:textOff=""
-        android:textOn="" />
-
-	<ToggleButton
-	    android:id="@+id/blue"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:layout_alignLeft="@+id/red"
-	    android:layout_alignParentBottom="true"
-	    android:layout_marginBottom="34dp"
-	    android:alpha="98"
-	    android:background="@android:color/transparent"
-	    android:button="@drawable/blue_check"
-	    android:focusable="false"
-	    android:focusableInTouchMode="false" 
-	    android:textOff=""
-        android:textOn="" />
+	     />
 
 	<ToggleButton
 	    android:id="@+id/rightButton"
@@ -99,20 +64,52 @@
 	    android:layout_height="wrap_content"
 	    android:layout_alignBaseline="@+id/blue"
 	    android:layout_alignBottom="@+id/blue"
-	    android:layout_alignLeft="@+id/centerButton"
+	    android:layout_alignLeft="@+id/leftButton"
 	    android:background="@android:color/transparent"
-	    android:button="@drawable/red_circle"
+	    android:button="@drawable/blue_circle"
+		/>
+
+	<ToggleButton
+	    android:id="@+id/blue"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignLeft="@+id/green"
+	    android:layout_alignParentBottom="true"
+	    android:layout_marginBottom="42dp"
+	    android:alpha="98"
+	    android:background="@android:color/transparent"
+	    android:button="@drawable/blue_check"
 	    android:focusable="false"
 	    android:focusableInTouchMode="false" 
+	    android:textOn=""
 	    android:textOff=""
-        android:textOn="" />
+	    />
 
-	<TextView
-	    android:id="@+id/colorPath"
-	    android:layout_width="10pt"
+	<ToggleButton
+	    android:id="@+id/leftButton"
+	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
-	    android:layout_alignBaseline="@+id/centerButton"
-	    android:layout_alignBottom="@+id/centerButton"
-	    android:layout_alignLeft="@+id/green" />
+	    android:layout_alignBaseline="@+id/red"
+	    android:layout_alignBottom="@+id/red"
+	    android:layout_alignParentRight="true"
+	    android:background="@android:color/transparent"
+	    android:button="@drawable/red_circle" />
+
+	<ToggleButton
+	    android:id="@+id/red"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_below="@+id/countdown"
+	    android:layout_marginLeft="17dp"
+	    android:layout_marginTop="18dp"
+	    android:alpha="100"
+	    android:background="@android:color/transparent"
+	    android:button="@drawable/red_check"
+	    android:focusable="false"
+	    android:focusableInTouchMode="false"
+	    android:textOn=""
+	    android:textOff=""
+	     />
       
 </RelativeLayout>
